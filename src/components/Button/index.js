@@ -1,9 +1,11 @@
 import './styles.css';
 
-export default function Button({ text }) {
+export default function Button(props) {
   return (
-    <button className={text === 'Adicionar' ? 'button' : 'button2'}>
-      {text}
+    <button
+      onClick={props.onClick}
+      className={props.text === 'Adicionar' ? 'button' : 'button2'}>
+      {props.text}
     </button>
   );
 }
